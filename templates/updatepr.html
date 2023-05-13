@@ -1,0 +1,73 @@
+
+<h1>{{ name }}</h1>
+<head>
+    <style>
+        *{
+          font-family: 'Oswald', sans-serif;
+        }
+        body{
+            background:#1b1b2b;
+            background-image: linear-gradient(to top, #cfd9df 0%, #115478bd 100%);
+            padding:75px;
+            text-align:left;
+            font-family: 'Oswald', sans-serif;
+            font-size: 18px;
+            height: 100vh;
+          }
+          h1{
+            color:#212121;
+            font-weight:120;
+          font-family: 'Oswald', sans-serif;
+          }
+        body {background-color: powderblue;}
+        .btn{
+          border:none;
+          color:rgb(0, 0, 0);
+          background:#115478bd;
+          padding:10px 20px;
+          text-decoration:none;
+          letter-spacing:2px;
+         
+        }
+        .butn{
+          border:none;
+          color:rgb(0, 0, 0);
+          background:#115478bd;
+          padding:10px 20px;
+          text-decoration:none;
+          letter-spacing:2px;
+         
+        }
+        .btn:hover{
+          border:none;
+          background:#115478bd;
+          background:#fff;
+          padding:20px 20px; 
+          color:#1b1b1b;
+        }
+
+        </style>
+</head>
+<body>
+    <div>
+        <button type="button" onclick = "window.location.href = '{{ url_for('index') }}';" class = "btn">
+            Back</button>
+        <h1>Proprietate</h1>
+            <form method = "post">
+              <label for = "Name">ID proprietate schimbare: </label>
+              <input type = "text" name = "ID_proprietate_vechi">
+              <br>
+        <select name = "Camp" class = "butn">
+            <option for = "Name" value = "ID_proprietate">ID proprietate</option>
+            <option for = "Name" value = "ID_proprietar">ID proprietar </option>
+            <option for = "Name" value = "Zona">Zona</option>
+            <option for = "Name" value = "Tip_loc">Tip loc</option>
+            <option for = "Name" value = "Nr_camere">Nr camere</option>
+            <option for = "Name" value = "Descriere">Descriere</option>
+        </select>
+            <input type = "text" name = "Camp_update">
+            <br><br>
+            <input type = "submit" onclick="window.location.href = '{{ url_for('updateproprietate') }}';" class = "btn">
+        </form>
+    </div> 
+</body>

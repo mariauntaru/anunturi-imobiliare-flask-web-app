@@ -1,0 +1,53 @@
+<head>
+    <button type="button" onclick = "window.location.href = '{{ url_for('index') }}';" class = "btn">
+    Back
+    </button>
+    <style>
+        *{
+          font-family: 'Oswald', sans-serif;
+        }
+        body{
+            background:#1b1b2b;
+            background-image: linear-gradient(to top, #cfd9df 0%, #115478bd 100%);
+            padding:75px;
+            text-align:left;
+            font-family: 'Oswald', sans-serif;
+            font-size: 18px;
+            height: 100vh;
+          }
+          h1{
+            color:#212121;
+            font-weight:120;
+          font-family: 'Oswald', sans-serif;
+          }
+        body {background-color: powderblue;}
+        .btn{
+          border:none;
+          color:rgb(0, 0, 0);
+          background:#115478bd;
+          padding:10px 20px;
+          text-decoration:none;
+          letter-spacing:2px;
+         
+        }
+      
+        .btn:hover{
+          border:none;
+          background:#115478bd;
+          background:#fff;
+          padding:20px 20px; 
+          color:#1b1b1b;
+        }
+
+        </style>
+</head>
+<body>
+    <div>
+        <h1>{{ name }}</h1>
+        <button type="button" onclick = "window.location.href = '{{ url_for('updatepr') }}';" class = "btn">
+            Update tabela Proprietate
+        </button>
+        <button type="button" onclick = "window.location.href = '{{ url_for('updateag') }}';" class = "btn">
+          Update tabela Agenti
+      </button>
+</body>

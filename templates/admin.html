@@ -1,0 +1,61 @@
+
+<html>
+    <head>
+    <style>
+    *{
+      font-family: 'Oswald', sans-serif;
+    }
+    body{
+        background:#1b1b2b;
+	      background-image: linear-gradient(to top, #115478bd 0%, #cfd9df 100%);
+        padding:75px;
+        text-align:left;
+        font-family: 'Oswald', sans-serif;
+        font-size: 18px;
+        
+      }
+      h1{
+        color:#212121;
+        font-weight:120;
+      font-family: 'Oswald', sans-serif;
+      }
+    body {background-color: powderblue;}
+
+    .btn{
+      border:none;
+      color:rgb(0, 0, 0);
+      background:#115478bd;
+      padding:10px 20px;
+      text-decoration:none;
+      letter-spacing:2px;
+     
+    }
+  
+    .btn:hover{
+      border:none;
+      background:#115478bd;
+      background:#fff;
+      padding:20px 20px; 
+      color:#1b1b1b;
+    }
+    ul {  
+      list-style-type: none;  
+      font-weight: bold;  
+      font-size: 20px;  
+    }  
+    </style>
+    </head>
+    <body>
+      <header>
+        <div>
+          <h1>Admin</h1>
+        </div>
+      </header>
+      <nav class="style-1">
+      <button type="button" onclick = "window.location.href = '{{ url_for('insert') }}';" class="btn">Insert</button>
+      <button type="button" onclick = "window.location.href = '{{ url_for('update') }}';" class="btn">Update</button>
+      <button type="button" onclick = "window.location.href = '{{ url_for('delete') }}';" class="btn">Delete</button>
+      </nav>
+      <br><br><br><br>
+    </body>
+  </html>

@@ -1,0 +1,90 @@
+<h1>{{ name }}</h1>
+
+<head>
+  <style>
+    table {
+border-collapse: collapse;
+width: 105%;
+
+}
+
+th, td {
+text-align: left;
+padding: 8px;
+}
+thead{
+  background-color: #073148bd;
+}
+tr:nth-child(even){background-color: #f2f2f2}
+th {
+background-color: #b6d2e1bd;
+color: white;
+}
+      *{
+      font-family: 'Oswald', sans-serif;
+    }
+    body{
+        background:#1b1b2b;
+        background-image: linear-gradient(to top, #cfd9df 0%, #115478bd 100%);
+        padding:75px;
+        text-align:left;
+        font-family: 'Oswald', sans-serif;
+        font-size: 18px;
+        height: 100vh;
+      }
+      h1,h2{
+        color:#212121;
+        font-weight:120;
+      font-family: 'Oswald', sans-serif;
+      }
+      th{
+        color:#212121;
+        font-weight:100;
+      font-family: 'Oswald', sans-serif;
+  
+      }
+    body {background-color: powderblue;}
+    .btn{
+      border:none;
+      color:#212121;
+      background:#115478bd;
+      padding:10px 20px;
+      text-decoration:none;
+      letter-spacing:2px;
+    }
+  </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th><h2>Zona<h2></th>
+                <th><h2>Tip loc<h2></th>
+                <th><h2>Numar Camere<h2></th>    
+                <th><h2>Descriere<h2></th>
+                <th><h2>Data<h2></th> 
+                <th><h2>Pret<h2></th>
+                <th><h2>Detalii<h2></th>
+                <th><h2>Nume agent<h2></th>
+                <th><h2>Prenume agent<h2></th>
+                <th><h2>Numar de telefon agent<h2></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in data %}
+            <tr>
+                <th>{{ row[0] }}</th>
+                <th>{{ row[1] }}</th>
+                <th>{{ row[2] }}</th>
+                <th>{{ row[3] }}</th>
+                <th>{{ row[4] }}</th>
+                <th>{{ row[5] }}</th>
+                <th>{{ row[6] }}</th>
+                <th>{{ row[7] }}</th>
+                <th>{{ row[8] }}</th>
+                <th>{{ row[9] }}</th>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>

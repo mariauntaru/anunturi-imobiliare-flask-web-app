@@ -1,0 +1,68 @@
+<h1>{{ name }}</h1>
+
+<head>
+    <style>    *{
+        font-family: 'Oswald', sans-serif;
+      }
+      body{
+          background:#1b1b2b;
+          background-image: linear-gradient(to top, #cfd9df 0%, #115478bd 100%);
+          padding:75px;
+          text-align:left;
+          font-family: 'Oswald', sans-serif;
+          font-size: 18px;
+          height: 100vh;
+        }
+        h1{
+          color:#212121;
+          font-weight:120;
+        font-family: 'Oswald', sans-serif;
+        }
+      body {background-color: powderblue;}
+      .btn{
+        border:none;
+        color:rgb(0, 0, 0);
+        background:#115478bd;
+        padding:10px 20px;
+        text-decoration:none;
+        letter-spacing:2px;
+       
+      }
+    
+      .btn:hover{
+        border:none;
+        background:#115478bd;
+        background:#fff;
+        padding:20px 20px; 
+        color:#1b1b1b;
+      }
+
+      </style>
+</head>
+<body>
+    <div>
+        <button type="button" onclick = "window.location.href = '{{ url_for('index') }}';" class = "btn">
+        Back
+        </button>
+        <br><br>
+        <form method = "post">
+            <label for = "Name">ID : &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+            <input type = "text" name = "ID">
+            <br>
+            <br>
+            <label for = "Name">Nume : &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+            <input type = "text" name = "Nume">
+            <br>
+            <br>
+            <label for = "Name">Prenume : &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+            <input type = "text" name = "Prenume">
+            <br>
+            <br>
+            <label for = "Name">Numar telefon : </label>
+            <input type = "text" name = "Nr_telefon">
+            <br>
+            <br>
+            <input type = "submit" onclick="window.location.href = '{{ url_for('insertAgent') }}';" class = "btn">
+        </form>
+    </div> 
+</body>
